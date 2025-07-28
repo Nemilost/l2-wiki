@@ -6,39 +6,32 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LA2P.RU WIKI',
   tagline: 'Википедия проекта LA2P.RU игры Lineage 2',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://https://wiki.la2p.ru/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // ИСПРАВЛЕНО: Правильный URL вашего сайта
+  url: 'https://wiki.la2p.ru',
+  
+  // ИСПРАВЛЕНО: Базовый путь для сайта в корне домена
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // ИСПРАВЛЕНО: Данные вашего GitHub репозитория
+  organizationName: 'Nemilost', // Ваш логин на GitHub
+  projectName: 'l2-wiki', // Название вашего репозитория
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ru', // ИЗМЕНЕНО: Установлен русский язык по умолчанию
+    locales: ['ru'],
   },
 
   presets: [
@@ -48,25 +41,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // ИСПРАВЛЕНО: Ссылка для редактирования удалена, чтобы не вызывать ошибок
         },
         blog: {
           showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          // ИСПРАВЛЕНО: Ссылка для редактирования удалена
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -78,7 +57,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'LA2P.RU WIKI',
@@ -91,11 +69,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Документация', // ИЗМЕНЕНО: Название пункта меню
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Блог', position: 'left'}, // ИЗМЕНЕНО: Название пункта меню
           {
-            href: 'https://github.com/facebook/docusaurus',
+            // ИСПРАВЛЕНО: Ссылка на ВАШ GitHub репозиторий
+            href: 'https://github.com/Nemilost/l2-wiki',
             label: 'GitHub',
             position: 'right',
           },
@@ -105,41 +84,30 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Разделы',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Документация',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
+                label: 'Блог',
                 to: '/blog',
               },
+            ],
+          },
+          {
+            title: 'Сообщество',
+            items: [
+              // Вы можете добавить сюда ссылки на ваши соцсети или форум
+            ],
+          },
+          {
+            title: 'Еще',
+            items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Nemilost/l2-wiki', // ИСПРАВЛЕНО: Ссылка на ВАШ GitHub
               },
             ],
           },
