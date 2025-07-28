@@ -6,9 +6,9 @@ sidebar_position: 1
 
 Документация по изменениям характеристик оружия в проекте LA2P.RU.
 
-![Изменения оружия](/static/img/internal-wiki/weapon-changes.png)
 
-## Weapon C
+
+# Оружие C
 
 # Меч Духов ![Меч Духов](/static/img/internal-wiki/sword-spirits.png)
 
